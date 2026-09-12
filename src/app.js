@@ -21,8 +21,9 @@ const accountRouter = require("./routes/account.routes")
  */
 
 app.use(express.json())
+app.use(cookieParser())
 app.use("/api/auth", authRouter) 
 app.use("/api/accounts", accountRouter)
-app.use(cookieParser())
+
 
 module.exports = app
