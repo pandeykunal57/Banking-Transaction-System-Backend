@@ -9,6 +9,11 @@ const app = express();
 /**
  * - Routes required
  */
+
+app.get("/", (req, res) => {
+    res.send("Ledger Service is up and running")
+})
+
 const authRouter = require("./routes/auth.routes")
 const accountRouter = require("./routes/account.routes")
 const transactionRouter = require("./routes/transaction.routes")
